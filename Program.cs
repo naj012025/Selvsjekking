@@ -3,7 +3,6 @@
 Fisk.DisplayRandomNumbers();
 Console.WriteLine("Frukt under her\n");
 Fruit.Rng();
-
 Console.WriteLine("BREAK");
 
 FiskeProdukter fisk = new FiskeProdukter("Findus", 39.90, 150, 25);
