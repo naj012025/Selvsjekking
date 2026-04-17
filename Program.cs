@@ -12,7 +12,11 @@ Console.WriteLine($"Produkt navnet: {fisk.Name}\nkoster: {fisk.Pris}vkr\nSingle 
 for (int i = 0; i < 10; i++)
 {
 
-    Random random = new Random();
-    Console.WriteLine(random.NextDouble() * (1.0 - 0.1) + 0.1);
+    /* Random random = new Random();
+    Console.WriteLine(random.NextDouble() * (1.0 - 0.1) + 0.1); */
+
+    // sjekker om du har true eller false i rng hvis din hitrater er 25% gjetter jeg.
+    Random Rng = new Random();
+    Console.WriteLine(Rng.NextDouble() < 0.25);
 }
 
