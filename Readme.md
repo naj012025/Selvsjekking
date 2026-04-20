@@ -89,3 +89,43 @@ Fiskepinner test = new Fiskepinner();
 Console.WriteLine(test.Name);
 Console.WriteLine(test.Pris);
 Console.WriteLine(test.Vekt);
+
+namespace Selvsjekk.Models;
+
+public class Fruit
+{
+// kan legge til hva som helst her egentlig for exempel Console.WriteLine("TEST") så vil den printe ut før den kjøre rng koden under.
+public static void Rng()
+{
+Random random = new Random();
+
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine(random.Next(1, 21));
+        }
+    }
+
+}
+
+###True False hitrate 25%###
+
+for (int i = 0; i < 10; i++)
+{
+
+    /* Random random = new Random();
+    Console.WriteLine(random.NextDouble() * (1.0 - 0.1) + 0.1); */
+
+    // sjekker om du har true eller false i rng hvis din hitrater er 25% gjetter jeg.
+    Random Rng = new Random();
+    Console.WriteLine(Rng.NextDouble() < 0.25);
+
+}
+
+    public void AddProduct(string? name, double pris, int vekt)
+    {
+        var product = new FiskProdukter();
+        product.Name = name;
+        product.Pris = pris;
+        product.Vekt = vekt;
+        Products.Add(product);
+    }

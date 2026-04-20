@@ -1,20 +1,24 @@
 namespace Selvsjekk.Models;
 
-public class FiskeProdukter
+public class FiskProdukter
 {
     public string? Name { get; set; }
+
     public double Pris { get; set; }
+
     public int Vekt { get; set; }
 
-    public int Antall { get; set; }
-
-
-    public FiskeProdukter(string name, double pris, int vekt, int antall)
+    public FiskProdukter(string? name, double pris, int vekt)
     {
         Name = name;
-        Pris = pris;
-        Vekt = vekt;
-        Antall = antall;
-    }
-}
 
+        Pris = pris;
+
+        Vekt = vekt;
+
+
+
+    }
+
+
+}

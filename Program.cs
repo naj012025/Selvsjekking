@@ -1,22 +1,20 @@
 ﻿using Selvsjekk.Models;
 
-Fisk.DisplayRandomNumbers();
-Console.WriteLine("Frukt under her\n");
-Fruit.Rng();
-Console.WriteLine("BREAK");
-
-FiskeProdukter fisk = new FiskeProdukter("Findus", 39.90, 150, 25);
-
-Console.WriteLine($"Produkt navnet: {fisk.Name}\nkoster: {fisk.Pris}vkr\nSingle produkt vekt er: {fisk.Vekt}g\nDu har {fisk.Antall} på lager.");
-
-for (int i = 0; i < 10; i++)
+class Program
 {
+    static void Main()
+    {
+        FiskStorage lager = new FiskStorage();
 
-    /* Random random = new Random();
-    Console.WriteLine(random.NextDouble() * (1.0 - 0.1) + 0.1); */
+        lager.AddProduct("torsk", 24231, 200);
+        lager.AddProduct("Testfisk2", 20.00, 250);
+        lager.AddProduct("Randoom", 49.90, 427);
 
-    // sjekker om du har true eller false i rng hvis din hitrater er 25% gjetter jeg.
-    Random Rng = new Random();
-    Console.WriteLine(Rng.NextDouble() < 0.25);
+        lager.ShowAll();
+
+        Console.WriteLine($"Total Pris Av alle Producter: {lager.TotalPris()} kr");
+        Console.WriteLine($"Total Vekt Av Alle Producter: {lager.TotalVekt()}g");
+
+
+    }
 }
-
